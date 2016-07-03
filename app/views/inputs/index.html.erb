@@ -1,0 +1,7 @@
+<% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+<%= link_to "New Input", new_input_path %>
