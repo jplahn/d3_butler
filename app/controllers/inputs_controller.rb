@@ -1,6 +1,6 @@
 class InputsController < ApplicationController
 	def index
-	  @input = Input.new
+	  @inputs = Input.all
 	end
 
 	def new
@@ -8,13 +8,13 @@ class InputsController < ApplicationController
 	end
 
 	def create
-	  @input = Input.new(params[:file])
-
-	  if @input.save
-	  	redirect_to inputs_path, notice: "Data uploaded"
-	  else
-	  	render "new"
-	  end
+	  input = input_params[:file]
+	  @data = input.read
 	end
+
+    private
+      def input_params
+      params.require(:input).permit(:file, :id)
+    end
 
 end
