@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :inputs
+  resources :visualizations
+  resources :inputs do
+    resources :visualizations
+  end
+
   root 'home#index'
 
   get '/home' => 'home#index'

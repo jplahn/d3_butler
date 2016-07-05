@@ -8,8 +8,7 @@ class InputsController < ApplicationController
 	end
 
 	def create
-	  input = input_params[:file]
-	  @data = input.read
+	  @input = input_params[:file]
 	end
 
     private
