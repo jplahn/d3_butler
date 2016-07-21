@@ -4,8 +4,10 @@
    </div>
 <% end %>
 
-<% link_to "New Input", new_input_path %>
+<%= link_to "New Input", new_input_path %>
+
+<br/>
 
 <% @inputs.each do |input| %>
-	<%= input.file %>
+	<%= input %>
 <% end %>

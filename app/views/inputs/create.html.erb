@@ -1,3 +1,4 @@
-<%= @input.file %>
+<div> Just uploaded <%= @input.original_filename %> </div>
 
-<%= @blah %>
+<div> Upload another file: <%= link_to "Upload file", new_input_path %> </div>
+<div> View all uploaded files: <%= link_to "All uploads", inputs_path %> </div>
